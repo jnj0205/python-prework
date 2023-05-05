@@ -19,15 +19,12 @@ first_odds()
 
 
 def max_num_in_list(max_num):
+    max_num = max(a_list)
+    return max_num
 
- for n in max_num:
-       if n + 1 <= max_num:
-           return(n)
-       else:
-           print(n)
-max_num = list[1,2,3,4,]
+test = max_num_in_list([1,2,3,4])
 
-print(max_num) 
+print(max_num_in_list([1,2,3,4])) 
 
 
 ### 4 Write a function to return if the given year is a leap year.### 
@@ -59,15 +56,14 @@ else:
 ### The return should be boolean Type. def is_consecutive(a_list):###
 
 def is_consecutive(a_list):
-   
- for n in list: n=[0]
-if n % 2 == 0: 
-        print(True)
-elif n % 1 == 0:
-        print(True)
-else: 
-        print(False)
-n=[0]
-a_list=list[1,2,3,]  
-print(a_list)
+   i = 0
+   status = True
+   while i < len(a_list) - 1:
+        if a_list[i] + 1 == a_list[i + 1]:
+            i += 1
+        else:
+            status = False
+            break
+a_list = [1,2,3,4,5,7,8]
+print(status)
     
